@@ -21,7 +21,7 @@ class SesionController extends Controller
             return back()->withErrors(['mensaje'=>'Email o contraseña invalidos']);
         }
 
-        return redirect()->to('/inicio');
+        return redirect()->to('/productos');
     }
 
     public function logout(Request $request)

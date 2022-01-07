@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SistemaController;
 use App\Http\Controllers\RegistrarController;
 use App\Http\Controllers\SesionController;
 use App\Http\Controllers\ProductoController;
@@ -31,8 +30,6 @@ Route::post('/login',[SesionController::class,'login'])->name('sistema.login');
 Route::post('/logout',[SesionController::class,'logout'])->middleware('auth')->name('sistema.logout');
 
 //Sistema de productos
-Route::get('/inicio',[SistemaController::class,'inicio'])->name('sistema.inicio');
-
 Route::get('/productos',[ProductoController::class,'index'])->name('productos.productos');
 Route::get('/carga',[ProductoController::class,'create'])->name('productos.create');
 Route::post('/carga',[ProductoController::class,'store'])->name('productos.store');
