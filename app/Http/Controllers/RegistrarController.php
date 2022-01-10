@@ -21,6 +21,6 @@ class RegistrarController extends Controller
 
         auth()->login($user);
 
-        return redirect()->to('/inicio');
+        return redirect()->to('/productos');
     }
 }
